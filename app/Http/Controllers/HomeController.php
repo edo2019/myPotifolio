@@ -8,6 +8,41 @@ class HomeController extends Controller
 {
     
     public function index(){
-      return view('index');
+      return view('pages.index');
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+
+    
+    public function about()
+    {
+        return view('pages.about');
+    }
+
+    
+    public function resume()
+    {
+        return view('pages.resume');
+    }
+
+    
+    public function portfolio()
+    {
+        return view('pages.portfolio');
+    }
+
+    
+    public function myEvents()
+    {
+        return view('pages.myEvents');
+    }
+
+    
+    public function blog()
+    {
+        return view('pages.blog');
     }
 }

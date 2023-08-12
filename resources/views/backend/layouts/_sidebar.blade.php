@@ -94,7 +94,7 @@
 
           <li class="nav-item">
             <a href="{{ url('admin/resume')}}" class="nav-link @if( Request::segment(2) == 'resume') active @endif">
-              <i class="nav-icon fa fa-briefcase"></i>
+              <i class="nav-icon fa fa-file"></i>
               <p>
                 Resume
               </p>
@@ -121,7 +121,7 @@
 
           <li class="nav-item">
             <a href="{{ url('admin/myEvents')}}" class="nav-link @if( Request::segment(2) == 'myEvents') active @endif">
-              <i class="nav-icon fa fa-address-card"></i>
+              <i class="nav-icon fa fa-image"></i>
               <p>
                 My Events
               </p>
@@ -133,6 +133,15 @@
               <i class="nav-icon fa fa-address-card"></i>
               <p>
                 Contact
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ url('logout')}}" class="nav-link @if( Request::segment(2) == 'logout') active @endif">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>

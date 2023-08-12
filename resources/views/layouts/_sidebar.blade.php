@@ -9,10 +9,10 @@
                         <a href="{{ url ('/')}}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
+                        <a href="{{ url('/about')}}" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
+                        <a href="{{ url('/resume')}}" class="nav-link">Resume</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav brand">
@@ -24,16 +24,16 @@
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <a href="{{ url('/portfolio')}}" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#blog" class="nav-link">Blog</a>
+                        <a href="{{ url('/blog')}}" class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item last-item">
-                        <a href="#contact" class="nav-link">My events</a>
+                        <a href="{{ url('/myEvents')}}" class="nav-link">My events</a>
                     </li>
                     <li class="nav-item last-item">
-                        <a href="/contact" class="nav-link">Contact</a>
+                        <a href="{{ url('/contact')}}" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
