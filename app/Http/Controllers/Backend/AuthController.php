@@ -14,6 +14,9 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
+        //$password = "123456789";
+        //$dd = Hash::make($password);
+        //dd($dd);
         return view('backend.auth.login');
     }
 
