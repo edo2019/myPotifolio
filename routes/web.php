@@ -41,6 +41,9 @@ Route::group(['middleware' => 'admin'],function(){
 
     Route::get('admin/home',[DashboardController::class, 'admin_home']);
 
+    Route::post('admin/home/post',[DashboardController::class, 'admin_home_post']);
+
+
     Route::get('admin/about',[DashboardController::class, 'admin_about']);
 
     Route::get('admin/resume',[DashboardController::class, 'admin_resume']);
