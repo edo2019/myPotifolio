@@ -49,16 +49,12 @@
                        </label>
                        <div class="col-sm-10">
                         <input type="file" name="profile_image" class="form-control">
-                          @if (!empty($insertRecord->profile_image))
-                          <img src="{{ asset($insertRecord->profile_image) }}" alt="Profile Image" style="max-width: 200px;">
-                          @else
-                          <p>No profile image available</p>
-                          @endif
-                      
 
+                        @if(@$getrecord[0]->profile_image)
+                        <img src="{{url('public/assets/imgs/'.@$getrecord[0]->profile_image)}}" width="200" height="200">
+                    @endif
                        </div>
                      </div>
-
 
 
                      <div class="form-group row">
@@ -66,7 +62,8 @@
                        Your name
                       </label>
                       <div class="col-sm-10">
-                       <input type="text" name="your_name" class="form-control" placeholder="Enter your name">
+                       <input type="text" name="your_name" class="form-control" placeholder="Enter your name"
+                       value="{{@$getrecord[0]->your_name}}">
                       </div>
                     </div>
 
@@ -75,7 +72,8 @@
                        Who Am I
                       </label>
                       <div class="col-sm-10">
-                       <textarea name="who_am_i" class="form-control" placeholder="Enter your infomations"></textarea>
+                       <textarea name="who_am_i" class="form-control" placeholder="Enter your infomations"
+                       > {{@$getrecord[0]->who_am_i}}</textarea>
                       </div>
                     </div>
 
@@ -84,7 +82,8 @@
                        Parsonal Information
                       </label>
                       <div class="col-sm-10">
-                      <textarea name="personal_info" class="form-control" placeholder="Enter your infomations"></textarea>
+                      <textarea name="personal_info" class="form-control" placeholder="Enter your infomations"
+                       >{{@$getrecord[0]->personal_info}}</textarea>
                       </div>
                     </div>
 
@@ -93,7 +92,8 @@
                        My Expertise
                       </label>
                       <div class="col-sm-10">
-                        <textarea name="my_expertise" class="form-control" placeholder="Enter your expertise infomations"></textarea>
+                        <textarea name="my_expertise" class="form-control" placeholder="Enter your expertise infomations" 
+                        >{{@$getrecord[0]->my_expertise}}</textarea>
                       </div>
                     </div>
 
@@ -102,14 +102,18 @@
                        Description
                       </label>
                       <div class="col-sm-10">
-                        <textarea name="description" class="form-control" placeholder="Enter your description infomations"></textarea>
+                        <textarea name="description" class="form-control" placeholder="Enter your description infomations"
+                         >{{@$getrecord[0]->description}}</textarea>
                       </div>
                     </div>
-
                    </div>
 
+                   <input type="hidden" name="id" value="{{@$getrecord[0]->id}}">
+
                    <div class="card-footer">
-                     <button type="submit" class="btn btn-info">Add</button>
+                     <button type="submit" name="add_to_update" id="add_to_update"
+                     value="@if(count($getrecord)>0) Edit @else Add @endif" 
+                     class="btn btn-info">@if(count($getrecord)>0) Edit @else Add @endif</button>
                      <a href="" class="btn btn-default float-right">Cancel</a>
                    </div>
                 </form>

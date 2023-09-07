@@ -3,7 +3,14 @@
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+            <div class="">
+              <img width="100px" height="60px" src="{{url('public/assets/imgs/'.@$getrecord[0]->profile_image)}}" alt="" >
+                
+                           
+
+            </div>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a href="{{ url ('/')}}" class="nav-link">Home</a>
@@ -16,7 +23,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav brand">
-                    <img src="assets/imgs/avatar.jpg" alt="" class="brand-img">
+                    <img src="{{url('public/assets/imgs/'.@$getrecord[0]->profile_image)}}" alt="" class="brand-img">
                     <li class="brand-txt">
                         <h5 class="brand-title">Edward Kafuka</h5>
                         <div class="brand-subtitle">Web Designer | Developer</div>
@@ -37,5 +44,6 @@
                     </li>
                 </ul>
             </div>
+    
         </div>
     </nav>
